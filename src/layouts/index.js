@@ -1,6 +1,5 @@
 import React from 'react'
 import { Layout, Menu } from 'antd'
-import PropTypes from 'prop-types'
 import { useHistory } from 'umi';
 import {
   UserOutlined,

@@ -21,13 +21,9 @@ export default {
       ]
     }
   ],
-  antd: {},
-  dva: {
-    hmr: true //是否启用 dva 的 热更新
-  },
   proxy: {
     "/api": {
-      "target": "http://sayhub.me/api/",
+      "target": process.env.proxyTarget,
       "changeOrigin": true,
       "pathRewrite": { "^/api" : "" }
     }

@@ -11,7 +11,7 @@ const Products = ({ dispatch, products }) => {
     });
   }
   function addItem() {
-    const item = { name: 'dva', id: 3, key: 3 }
+    const item = { name: 'dva', id: products.length+1, key: products.length+1 }
     dispatch({
       type: 'products/add',
       payload: item,

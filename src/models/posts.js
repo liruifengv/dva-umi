@@ -1,5 +1,3 @@
-
-// import pathToRegexp from 'path-to-regexp';
 import { getPosts } from '../services/posts';
 export default {
 
@@ -12,13 +10,10 @@ export default {
 
   subscriptions: {
     setup({ dispatch, history }) {  // eslint-disable-line
-      history.listen((route) => {
-        // FIXME: route 在默认情况和history.push 的返回值不一样
-        console.log('route:', route)
-        // console.log('pathname:', pathname)
-        // if (pathname === '/posts') {
-        //   dispatch({ type: 'fetchPosts', payload: 1 });
-        // }
+      history.listen(({pathname}) => {
+        if (pathname === '/posts') {
+          dispatch({ type: 'fetchPosts', payload: 1 });
+        }
       });
     },
   },

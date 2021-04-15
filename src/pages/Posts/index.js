@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'dva';
 
 const Posts = ({ dispatch, posts }) => {
 
-  useEffect(() => {
-    dispatch({ type: 'posts/fetchPosts', payload: 1 });
-  }, [dispatch]);
-  
   const postItems = posts.list.map((item, index) =>
     <div key={ index }>
       <h1>{item.title}</h1>

@@ -1,10 +1,10 @@
 import React from 'react'
-import './home.module.less'
+import styles from './home.module.less'
 
 const Home = () => {
   return (
-    <div className="home">
-      <span className="test">Home</span>
+    <div className={styles.home}>
+      <span className={styles.test}>Home</span>
     </div>
   )
 }
