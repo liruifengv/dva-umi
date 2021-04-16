@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './home.module.less'
+import styles from './home.less'
 
 const Home = () => {
   return (
